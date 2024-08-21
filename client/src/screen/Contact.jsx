@@ -23,6 +23,10 @@ const Contact = () => {
       withCredentials: true
     }
     ).then((response)=>{
+      setName('')
+      setEmail('')
+      setSubject('')
+      setMessage('')
       const data = response.data
       if(data.success) return toast.success('Message sent successfully');
     }).catch((error) =>{
