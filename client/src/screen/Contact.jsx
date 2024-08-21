@@ -24,10 +24,10 @@ const Contact = () => {
     }
     ).then((response)=>{
       const data = response.data
-      if(data.success) return alert('Message sent successfully');
+      if(data.success) return toast.success('Message sent successfully');
     }).catch((error) =>{
       const data = error.response.data
-      alert(data.message || "Something went wrong")
+      toast.error(data.message || "Something went wrong")
     });
   }
 
