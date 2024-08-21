@@ -13,7 +13,7 @@ export default function Order() {
 
       try {
         setLoading(true)
-        axios.post('http://localhost:5000/api/orderdatalist', {email},{
+        axios.post('https://foodgo-mern.onrender.com/api/orderdatalist', {email},{
           headers: {"content-type" : "application/json"},
           withCredentials: true
         }).then((response) =>{

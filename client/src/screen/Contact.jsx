@@ -16,7 +16,7 @@ const Contact = () => {
     if(!name || !email || !subject || !message) return toast.error('Please fill all the fields')
 
     if(localStorage.authToken === undefined) return toast.error('Please login first')
-    axios.post('http://localhost:5000/api/contact',{
+    axios.post('https://foodgo-mern.onrender.com/api/contact',{
       name, email, subject, message
     },{
       headers:{"content-type" : "application/json"},

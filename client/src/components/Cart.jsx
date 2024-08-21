@@ -28,7 +28,7 @@ export default function Cart() {
         let date = new Date().toDateString();
         let userEmail = localStorage.getItem('userEmail')
 
-        axios.post('http://localhost:5000/api/orderdata', {
+        axios.post('https://foodgo-mern.onrender.com/api/orderdata', {
             order_date:{
                 date: date,
                 location: location

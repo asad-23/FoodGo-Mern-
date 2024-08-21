@@ -25,7 +25,7 @@ export default function Signup() {
         if(password.lenth < 4) return toast.error("Password must be at least 4 characters");
 
         setLoading(true)
-        axios.post('http://localhost:5000/api/login',
+        axios.post('https://foodgo-mern.onrender.com/api/login',
             {
                 email, password
             },{
